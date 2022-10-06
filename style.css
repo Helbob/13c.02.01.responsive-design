@@ -1,6 +1,12 @@
 /* Tip, copy paste from 13c.01.01 & 13c.01.02 to get fonts and colors up and running ... */
 
+body {
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
 /* Generel display, colors, fonts, sizes */
+
 :root {
   font-family: "Poppins", sans-serif;
   font-size: 1.2em;
@@ -103,6 +109,17 @@ nav button {
 }
 
 .advantages_card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#test {
   display: flex;
   flex-direction: column;
 }
