@@ -62,13 +62,47 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Images */
 img {
   width: 100%;
 }
 
+/* Nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul,
+li {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav button {
+  min-width: 50px;
+  max-height: 30px;
+}
+
+/* Background image advantages */
 .advantages_card_graphics {
   background-image: url("birdie.PNG");
   background-repeat: no-repeat;
-  min-height: 300px;
-  object-fit: cover;
+  background-size: cover;
+  min-height: 150px;
+  min-width: 150px;
+}
+
+/* Section advantages */
+
+.advantages_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  grid-gap: 1rem;
+}
+
+.advantages_card {
+  display: flex;
+  flex-direction: column;
 }
