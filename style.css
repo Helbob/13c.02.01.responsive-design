@@ -1,0 +1,74 @@
+/* Tip, copy paste from 13c.01.01 & 13c.01.02 to get fonts and colors up and running ... */
+
+/* Generel display, colors, fonts, sizes */
+:root {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+  --color-primary1: #242324;
+  --color-primary2: var(--color-primary1);
+  --color-secondary1: #313131;
+  --color-secondary2: #d6c4a6;
+  --color-accent1: #fc2d2b;
+  --color-accent2: #0c0f14;
+  --font-headings: "Lato", sans-serif;
+  --font-buttons: "Francois One", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-secondary1);
+  font-family: var(--font-headings);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: var(--color-secondary1);
+  font-size: 3.052rem;
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.953rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: var(--color-secondary1);
+  font-family: var(--font-headings);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-accent1);
+  font-family: var(--font-buttons);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+}
+
+.advantages_card_graphics {
+  background-image: url("birdie.PNG");
+  background-repeat: no-repeat;
+  min-height: 300px;
+  object-fit: cover;
+}
