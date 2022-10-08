@@ -2,7 +2,6 @@
 
 body {
   margin: 0 auto;
-  max-width: 1300px;
 }
 
 /* Generel display, colors, fonts, sizes */
@@ -79,7 +78,7 @@ nav {
   justify-content: space-between;
 }
 
-ul,
+nav ul,
 li {
   list-style-type: none;
   display: flex;
@@ -91,16 +90,37 @@ nav button {
   max-height: 30px;
 }
 
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-secondary2);
+  min-height: 20rem;
+}
+
+.header_graphics {
+  background-image: url("birdie.PNG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 8rem;
+  margin: 2rem;
+  background-position: 50%;
+  min-width: 15rem;
+}
 /* Background image advantages */
 .advantages_card_graphics {
   background-image: url("birdie.PNG");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 150px;
-  min-width: 150px;
+  min-height: 8rem;
+  min-width: 8rem;
 }
 
 /* Section advantages */
+#advantages {
+  display: grid;
+  justify-content: center;
+}
 
 .advantages_cards {
   display: grid;
@@ -113,8 +133,64 @@ nav button {
   flex-direction: column;
 }
 
+.advantages_card_text {
+}
+
+/* Product */
+#product {
+  background-color: var(--color-secondary2);
+}
+
+#grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product_graphics {
+  background-image: url("birdie.PNG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 8rem;
+  min-width: 40rem;
+  margin: 2rem;
+}
+
+/* Highlight */
+.highlight_small_cards {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}
+
+/* Team */
+#team {
+  background-color: var(--color-secondary1);
+}
+
+.leftright {
+  display: flex;
+}
+
+.team_graphics {
+  background-image: url("birdie.PNG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 8rem;
+  min-width: 20rem;
+  margin: 2rem;
+}
+
+/* Contact form */
+#contact_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  max-width: 500px;
+}
+
 /* Footer */
 footer {
+  background-color: var(--color-primary1);
   display: flex;
   justify-content: space-between;
 }
