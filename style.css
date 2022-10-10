@@ -20,14 +20,14 @@ body {
 h1,
 h2,
 h3 {
-  color: var(--color-primary2);
+  color: var(--color-accent2);
   font-family: var(--font-headings);
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 h1 {
-  color: var(--color-secondary1);
+  color: var(--color-accent2);
   font-size: 3.052rem;
   line-height: 3.5rem;
   margin-bottom: 2rem;
@@ -47,7 +47,7 @@ h3 {
 }
 
 p {
-  color: var(--color-secondary1);
+  color: var(--color-accent2);
   font-family: var(--font-headings);
   font-weight: 400;
   font-size: 1rem;
@@ -111,6 +111,7 @@ header {
   background-image: url("birdie.PNG");
   background-repeat: no-repeat;
   background-size: cover;
+  aspect-ratio: 2/1;
   min-height: 8rem;
   min-width: 8rem;
 }
@@ -119,20 +120,34 @@ header {
 #advantages {
   display: grid;
   justify-content: center;
+  min-width: 50rem;
 }
 
 .advantages_cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 3rem;
 }
 
 .advantages_card {
   display: flex;
   flex-direction: column;
+  background-color: rgb(167, 117, 207);
+  border-radius: 4px;
+  min-height: 20rem;
+  min-width: 15rem;
+}
+
+.advantages_card:hover {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(167, 117, 207);
+  border-radius: 4px;
+  box-shadow: 1rem 1rem 3rem grey;
 }
 
 .advantages_card_text {
+  margin: 3%;
 }
 
 /* Product */
