@@ -7,12 +7,12 @@ body {
 /* Generel display, colors, fonts, sizes */
 
 :root {
-  --color-primary1: #f5f5f5;
-  --color-primary2: #bfcde0;
+  --color-primary1: #202020;
+  --color-primary2: #3b3355;
   --color-secondary1: #5d5d81;
   --color-secondary2: var(--color-secondary1);
-  --color-accent1: #3b3355;
-  --color-accent2: #0d0e0e;
+  --color-accent1: #bfcde0;
+  --color-accent2: #f5f5f5;
   --font-headings: "Lato", sans-serif;
   --font-buttons: "Francois One", sans-serif;
 }
@@ -36,7 +36,7 @@ h1 {
 h2 {
   font-size: 1.953rem;
   line-height: 2rem;
-  margin-bottom: 2rem;
+  margin: 0;
 }
 
 h3 {
@@ -75,6 +75,7 @@ img {
 nav {
   display: flex;
   justify-content: space-between;
+  background-color: var(--color-primary2);
 }
 
 nav ul,
@@ -93,25 +94,26 @@ nav button {
 header {
   display: flex;
   justify-content: center;
-  background-color: var(--color-secondary2);
-  min-height: 20rem;
+  background-color: var(--color-primary1);
+  min-height: 80vh;
 }
 
 .header_graphics {
-  background-image: url("birdie.PNG");
+  background-image: url("header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 8rem;
+  min-height: 23rem;
   margin: 2rem;
+  aspect-ratio: 1/1;
   background-position: 50%;
   min-width: 15rem;
 }
 /* Background image advantages */
 .advantages_card_graphics {
-  background-image: url("birdie.PNG");
+  background-image: url("shells.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  aspect-ratio: 2/1;
+  aspect-ratio: 1/1;
   min-height: 8rem;
   min-width: 8rem;
 }
@@ -121,29 +123,34 @@ header {
   display: grid;
   justify-content: center;
   min-width: 50rem;
+  background-color: var(--color-primary2);
+  padding-top: 6%;
 }
 
 .advantages_cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
   grid-gap: 3rem;
+  padding-bottom: 10%;
+  padding-top: 3%;
 }
 
 .advantages_card {
   display: flex;
   flex-direction: column;
-  background-color: rgb(167, 117, 207);
+  background-color: var(--color-accent1);
   border-radius: 4px;
   min-height: 20rem;
   min-width: 15rem;
+  cursor: pointer;
 }
 
 .advantages_card:hover {
   display: flex;
   flex-direction: column;
-  background-color: rgb(167, 117, 207);
+  background-color: var(--color-primary2);
   border-radius: 4px;
-  box-shadow: 1rem 1rem 3rem grey;
+  box-shadow: 1rem 1rem 3rem rgb(35, 35, 35);
 }
 
 .advantages_card_text {
@@ -152,7 +159,7 @@ header {
 
 /* Product */
 #product {
-  background-color: var(--color-secondary2);
+  background-color: var(--color-primary1);
 }
 
 #grid {
@@ -161,7 +168,7 @@ header {
 }
 
 .product_graphics {
-  background-image: url("birdie.PNG");
+  background-image: url("shells.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 8rem;
@@ -170,6 +177,10 @@ header {
 }
 
 /* Highlight */
+.highlight {
+  background-color: var(--color-primary2);
+}
+
 .highlight_small_cards {
   display: flex;
   justify-content: center;
@@ -178,7 +189,7 @@ header {
 
 /* Team */
 #team {
-  background-color: var(--color-secondary1);
+  background-color: var(--color-primary1);
 }
 
 .leftright {
@@ -186,7 +197,7 @@ header {
 }
 
 .team_graphics {
-  background-image: url("birdie.PNG");
+  background-image: url("shells.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 8rem;
@@ -195,6 +206,10 @@ header {
 }
 
 /* Contact form */
+#contact {
+  background-color: var(--color-primary1);
+}
+
 #contact_form {
   max-width: 50%;
   display: grid;
@@ -223,7 +238,7 @@ header {
 
 /* Footer */
 footer {
-  background-color: var(--color-primary1);
+  background-color: var(--color-primary2);
   display: flex;
   justify-content: space-between;
 }
