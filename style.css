@@ -93,9 +93,13 @@ nav button {
 /* Header */
 header {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
   background-color: var(--color-primary1);
   min-height: 80vh;
+  padding: 5%;
+}
+.header_text {
 }
 
 .header_graphics {
@@ -160,11 +164,17 @@ header {
 /* Product */
 #product {
   background-color: var(--color-primary1);
+  padding: 5%;
+}
+
+#product h2 {
+  padding: 3%;
 }
 
 #grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .product_graphics {
@@ -172,28 +182,45 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 8rem;
-  min-width: 40rem;
+  min-width: 30rem;
   margin: 2rem;
+  aspect-ratio: 1/1;
 }
 
 /* Highlight */
 .highlight {
   background-color: var(--color-primary2);
+  padding: 5%;
 }
 
 .highlight_small_cards {
   display: flex;
   justify-content: center;
   gap: 10rem;
+  min-width: 30rem;
+  padding: 5%;
+}
+
+.highlight_small_cards > div {
+  min-width: 10rem;
+  min-height: 7rem;
+  padding: 1%;
+  background-color: rgb(78, 78, 140);
 }
 
 /* Team */
 #team {
   background-color: var(--color-primary1);
+  padding: 5%;
+}
+
+#team h2 {
+  padding: 2.2%;
 }
 
 .leftright {
   display: flex;
+  align-items: center;
 }
 
 .team_graphics {
@@ -203,47 +230,72 @@ header {
   min-height: 8rem;
   min-width: 20rem;
   margin: 2rem;
+  aspect-ratio: 1/1;
 }
 
 /* Contact form */
 #contact {
-  background-color: var(--color-primary1);
+  display: grid;
+  padding: 5%;
+  grid-template-columns: 1fr;
+  background-color: var(--color-primary2);
+  justify-content: space-around;
+  align-items: center;
+}
+#contact h2,
+p {
+  text-align: center;
 }
 
 #contact_form {
-  max-width: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+  max-width: 50vw;
+  margin-right: 1rem;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 #contact_form button {
-  max-height: 40px;
-  max-width: 100px;
+  max-height: 50px;
+  max-width: 200px;
+}
+.form_group:nth-of-type(3),
+.form_group:nth-of-type(4) {
+  grid-column: span 2;
 }
 .form_group {
-  display: grid;
-  grid-gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
 }
-.under {
-  grid-area: 3 / 1;
-}
-#name,
-#email {
-  grid-column: 1/2;
-}
-
-#message {
-  grid-column: 1 / 3; /* let them take the full width */
+.form_group:nth-of-type(4) {
+  display: flex;
+  align-items: center;
 }
 
 /* Footer */
 footer {
-  background-color: var(--color-primary2);
+  background-color: var(--color-primary1);
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  padding: 2rem 3rem;
 }
 
-#test {
+footer ul {
+  list-style: none;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: var(--color-secondary1);
+}
+
+footer section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
