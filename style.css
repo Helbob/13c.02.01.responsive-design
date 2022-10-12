@@ -242,8 +242,11 @@ header {
   justify-content: space-around;
   align-items: center;
 }
-#contact h2,
-p {
+#contact h2 {
+  text-align: center;
+}
+
+#contact p {
   text-align: center;
 }
 
