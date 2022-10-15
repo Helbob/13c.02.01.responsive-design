@@ -7,12 +7,12 @@ body {
 /* Generel display, colors, fonts, sizes */
 
 :root {
-  --color-primary1: #202020;
-  --color-primary2: #3b3355;
-  --color-secondary1: #5d5d81;
-  --color-secondary2: var(--color-secondary1);
-  --color-accent1: #bfcde0;
-  --color-accent2: #f5f5f5;
+  --color-primary1: #dadada;
+  --color-primary2: var(--color-primary1);
+  --color-secondary1: #461025;
+  --color-secondary2: rgb(19, 19, 19);
+  --color-accent1: #cd912b;
+  --color-accent2: var(--color-accent1);
   --font-headings: "Lato", sans-serif;
   --font-buttons: "Francois One", sans-serif;
 }
@@ -20,14 +20,14 @@ body {
 h1,
 h2,
 h3 {
-  color: var(--color-accent2);
+  color: var(--color-secondary1);
   font-family: var(--font-headings);
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 h1 {
-  color: var(--color-accent2);
+  color: var(--color-secondary1);
   font-size: 3.052rem;
   line-height: 3.5rem;
   margin-bottom: 2rem;
@@ -47,7 +47,7 @@ h3 {
 }
 
 p {
-  color: var(--color-accent2);
+  color: var(--color-secondary1);
   font-family: var(--font-headings);
   font-weight: 400;
   font-size: 1rem;
@@ -58,7 +58,7 @@ p {
 a,
 li {
   text-decoration: none;
-  color: var(--color-accent1);
+  color: var(--color-primary1);
   font-family: var(--font-buttons);
 }
 
@@ -75,7 +75,7 @@ img {
 nav {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-primary2);
+  background-color: var(--color-secondary1);
 }
 
 nav ul,
@@ -120,33 +120,35 @@ header {
   aspect-ratio: 1/1;
   min-height: 8rem;
   min-width: 8rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }
 
 /* Section advantages */
 #advantages {
-  display: grid;
-  justify-content: center;
-  min-width: 50rem;
-  background-color: var(--color-primary2);
-  padding-top: 6%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5%;
+  background-color: var(--color-primary1);
 }
 
 .advantages_cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   grid-gap: 3rem;
-  padding-bottom: 10%;
-  padding-top: 3%;
+  justify-content: space-around;
 }
 
 .advantages_card {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-accent1);
+  background-color: white;
   border-radius: 4px;
   min-height: 20rem;
   min-width: 15rem;
   cursor: pointer;
+  border-radius: 1.5rem;
 }
 
 .advantages_card:hover {
@@ -155,6 +157,15 @@ header {
   background-color: var(--color-primary2);
   border-radius: 4px;
   box-shadow: 1rem 1rem 3rem rgb(35, 35, 35);
+  border-radius: 1.5rem;
+}
+
+.advantages_card h3 {
+  color: var(--color-secondary1);
+}
+
+.advantages_card p {
+  color: var(--color-secondary2);
 }
 
 .advantages_card_text {
@@ -189,7 +200,7 @@ header {
 
 /* Highlight */
 .highlight {
-  background-color: var(--color-primary2);
+  background-color: var(--color-secondary1);
   padding: 5%;
 }
 
@@ -205,7 +216,8 @@ header {
   min-width: 10rem;
   min-height: 7rem;
   padding: 1%;
-  background-color: rgb(78, 78, 140);
+  background-color: var(--color-primary1);
+  border-radius: 10px;
 }
 
 /* Team */
@@ -216,6 +228,11 @@ header {
 
 #team h2 {
   padding: 2.2%;
+}
+
+#team a {
+  color: var(--color-accent1);
+  font-weight: bold;
 }
 
 .leftright {
@@ -231,6 +248,18 @@ header {
   min-width: 20rem;
   margin: 2rem;
   aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+#team h3,
+li {
+  color: var(--color-primary1);
+}
+
+.team_text {
+  background-color: var(--color-secondary1);
+  padding: 2%;
+  border-radius: 1.5rem;
 }
 
 /* Contact form */
@@ -249,6 +278,9 @@ header {
 #contact p {
   text-align: center;
 }
+label {
+  font-family: var(--font-headings);
+}
 
 #contact_form {
   display: grid;
@@ -259,10 +291,16 @@ header {
   color: white;
   margin-left: auto;
   margin-right: auto;
+  background-color: var(--color-primary1);
+  padding: 5%;
 }
 #contact_form button {
   max-height: 50px;
-  max-width: 200px;
+  grid-column: span 2;
+  background-color: var(--color-accent1);
+  border: none;
+  border-radius: 10px;
+  min-height: 2.5rem;
 }
 .form_group:nth-of-type(3),
 .form_group:nth-of-type(4) {
@@ -280,7 +318,7 @@ header {
 
 /* Footer */
 footer {
-  background-color: var(--color-primary1);
+  background-color: var(--color-secondary1);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
