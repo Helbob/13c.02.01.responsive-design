@@ -16,7 +16,13 @@ body {
   --font-headings: "Lato", sans-serif;
   --font-buttons: "Francois One", sans-serif;
 }
-
+button {
+  min-width: 50px;
+  min-height: 2rem;
+  background-color: var(--color-accent1);
+  border: none;
+  border-radius: 10px;
+}
 h1,
 h2,
 h3 {
@@ -47,7 +53,7 @@ h3 {
 }
 
 p {
-  color: var(--color-secondary1);
+  color: var(--color-secondary2);
   font-family: var(--font-headings);
   font-weight: 400;
   font-size: 1rem;
@@ -103,26 +109,27 @@ header {
   background-color: var(--color-primary1);
   min-height: 80vh;
   padding: 5%;
+  flex-wrap: wrap;
 }
 .header_text {
 }
 
 .header_graphics {
-  background-image: url("header.jpg");
+  background-image: url("headerfield.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 23rem;
+  min-height: 40rem;
   margin: 2rem;
-  aspect-ratio: 1/1;
   background-position: 50%;
-  min-width: 15rem;
+  min-width: 22rem;
 }
 /* Background image advantages */
 .advantages_card_graphics {
-  background-image: url("shells.jpg");
+  background-image: url("wine.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   aspect-ratio: 1/1;
+  background-position: 70%;
   min-height: 8rem;
   min-width: 8rem;
   border-top-left-radius: 1.5rem;
@@ -188,6 +195,10 @@ header {
   padding-left: 8.5%;
 }
 
+#product h3 {
+  color: var(--color-secondary1);
+}
+
 #grid {
   display: flex;
   justify-content: space-around;
@@ -195,7 +206,7 @@ header {
 }
 
 .product_graphics {
-  background-image: url("shells.jpg");
+  background-image: url("headertings.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 8rem;
@@ -219,6 +230,10 @@ header {
   color: var(--color-primary1);
   max-width: 80%;
   text-align: center;
+}
+
+.highlight h3 {
+  color: var(--color-secondary1);
 }
 
 .highlight_small_cards {
@@ -263,9 +278,25 @@ header {
   display: flex;
   align-items: center;
 }
+.rightleft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.team_graphic {
+  background-image: url("teamtwo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 8rem;
+  min-width: 20rem;
+  margin: 2rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  order: 2;
+}
 
 .team_graphics {
-  background-image: url("shells.jpg");
+  background-image: url("teamone.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 8rem;
@@ -356,7 +387,12 @@ footer ul {
 
 footer ul li a {
   text-decoration: none;
-  color: var(--color-secondary1);
+  color: var(--color-accent1);
+}
+
+footer h2,
+h3 {
+  color: var(--color-primary1);
 }
 
 footer section {
@@ -395,5 +431,36 @@ footer section {
 
   nav button {
     margin-bottom: 5%;
+  }
+
+  #grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .highlight {
+    display: flex;
+    flex-direction: column;
+  }
+  .highlight h2 {
+    max-width: 100%;
+  }
+
+  .highlight_small_cards {
+    flex-direction: column;
+  }
+
+  .leftright {
+    flex-direction: column;
+  }
+
+  #contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contact_form {
+    display: flex;
+    flex-direction: column;
   }
 }
