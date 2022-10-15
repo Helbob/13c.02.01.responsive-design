@@ -76,6 +76,8 @@ nav {
   display: flex;
   justify-content: space-between;
   background-color: var(--color-secondary1);
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 nav ul,
@@ -87,7 +89,10 @@ li {
 
 nav button {
   min-width: 50px;
-  max-height: 30px;
+  min-height: 2rem;
+  background-color: var(--color-accent1);
+  border: none;
+  border-radius: 10px;
 }
 
 /* Header */
@@ -147,6 +152,7 @@ header {
   border-radius: 4px;
   min-height: 20rem;
   min-width: 15rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   cursor: pointer;
   border-radius: 1.5rem;
 }
@@ -156,7 +162,7 @@ header {
   flex-direction: column;
   background-color: var(--color-primary2);
   border-radius: 4px;
-  box-shadow: 1rem 1rem 3rem rgb(35, 35, 35);
+
   border-radius: 1.5rem;
 }
 
@@ -179,7 +185,7 @@ header {
 }
 
 #product h2 {
-  padding: 3%;
+  padding-left: 8.5%;
 }
 
 #grid {
@@ -199,25 +205,43 @@ header {
 }
 
 /* Highlight */
+
 .highlight {
   background-color: var(--color-secondary1);
-  padding: 5%;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: left;
+  gap: 2rem;
+  justify-items: center;
+}
+.highlight h2 {
+  color: var(--color-primary1);
+  max-width: 80%;
+  text-align: center;
 }
 
 .highlight_small_cards {
   display: flex;
-  justify-content: center;
-  gap: 10rem;
-  min-width: 30rem;
-  padding: 5%;
+  flex-direction: row;
+  gap: 2rem;
 }
 
 .highlight_small_cards > div {
-  min-width: 10rem;
-  min-height: 7rem;
-  padding: 1%;
+  padding: 1rem;
   background-color: var(--color-primary1);
   border-radius: 10px;
+  min-width: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight button {
+  min-width: 10rem;
+  background-color: var(--color-accent1);
+  border: none;
+  border-radius: 10px;
+  min-height: 2.5rem;
 }
 
 /* Team */
@@ -339,4 +363,36 @@ footer section {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 3rem;
+}
+
+/* Mobile */
+@media (max-width: 750px) {
+  nav {
+    display: flex;
+    padding: 0%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  nav a {
+    margin-top: 5%;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav ul {
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0%;
+  }
+
+  nav button {
+    margin-bottom: 5%;
+  }
 }
