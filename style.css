@@ -378,7 +378,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 2rem 3rem;
+  padding: 2rem 2rem;
 }
 
 footer ul {
@@ -454,6 +454,13 @@ footer section {
     flex-direction: column;
   }
 
+  .rightleft {
+    flex-direction: column;
+  }
+
+  .team_text {
+    order: 2;
+  }
   #contact {
     display: flex;
     flex-direction: column;
@@ -462,5 +469,27 @@ footer section {
   #contact_form {
     display: flex;
     flex-direction: column;
+  }
+
+  footer {
+    background-color: var(--color-secondary1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .product_graphics {
+    background-image: url("headertings.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 18rem;
+    min-width: 10rem;
+    max-width: 5rem;
+    margin: 2rem;
+    aspect-ratio: 1/1;
+  }
+
+  .header_graphics {
+    min-width: 18rem;
   }
 }
